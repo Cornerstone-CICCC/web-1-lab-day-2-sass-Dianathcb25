@@ -1,0 +1,64 @@
+@use './variables';
+@use './header';
+@use './footer';
+
+body {
+    font-family: variables.$fontStack;
+    
+    .back-to-top-btn {
+        padding: 10px;
+        background-color: black;
+        color: white;
+        display:flex;
+        align-items:end;
+        justify-content: end;
+        position:fixed;
+        bottom: 0;
+        right: 0;
+    }
+}
+main {
+    padding: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    
+    h2 {
+        background-color: variables.$colorPerfume;
+        position: sticky;
+        top: 54px;
+
+    } 
+
+    .gallery {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .fruit-hover {
+        
+        figure {
+            position: relative;
+            width: 50%;
+
+            figcaption {
+                display: none;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+
+            &:hover {
+                figcaption {
+                    background-color: red;
+                    display: inline-block;
+                }
+            }
+
+        }
+    }
+}
+
+
+
